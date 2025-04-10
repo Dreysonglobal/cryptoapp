@@ -1,0 +1,40 @@
+<!-- sell.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sell Crypto</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="container">
+  <div class="form-page">
+    <h2>Sell Crypto</h2>
+    <form id="sellForm">
+      <label for="coin">Select Coin:</label>
+      <select id="coin">
+        <option value="BTC">Bitcoin (BTC)</option>
+        <option value="ETH">Ethereum (ETH)</option>
+        <option value="BNB">BNB</option>
+      </select>
+
+      <label for="amount">Amount to Sell:</label>
+      <input type="number" id="amount" placeholder="Enter amount" required />
+
+      <button type="submit">Sell Now</button>
+    </form>
+    <a class="back-link" href="dashboard.html">← Back to Dashboard</a>
+  </div>
+</div>
+
+  <script src="js/protect.js"></script>
+  <script>
+    document.getElementById("sellForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Sale successful! (Fake transaction)");
+      window.location.href = "dashboard.html";
+    });
+  </script>
+</body>
+</html>
