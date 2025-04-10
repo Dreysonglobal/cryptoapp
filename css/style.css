@@ -1,19 +1,12 @@
 /* css/style.css */
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #1e3a8a, #2563eb);
-    color: #fff;
-  }
-  
-  .login-container {
+.login-container {
     max-width: 400px;
     margin: 100px auto;
-    background: #ffffff11;
+    background: rgba(255, 255, 255, 0.07); 
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
   }
   
@@ -45,13 +38,13 @@ body {
   button:hover {
     background-color: #1e40af;
   }
-
+  
   /* Dashboard Page */
-.dashboard {
+  .dashboard {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff11;
+    background-color: rgba(255, 255, 255, 0.07);
     border-radius: 12px;
   }
   
@@ -109,7 +102,7 @@ body {
     max-width: 500px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff11;
+    background-color: rgba(255, 255, 255, 0.07); 
     border-radius: 12px;
   }
   
@@ -151,9 +144,8 @@ body {
     text-decoration: none;
   }
   
-  /* For chart */
-/* Make sure to adjust the width and height of the canvas */
-#priceChart {
+ 
+  #priceChart {
     width: 80%;
     height: 400px;
     margin: 0 auto;
@@ -175,8 +167,7 @@ body {
     text-decoration: underline;
   }
   
-
-.chart-page {
+  .chart-page {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
@@ -200,7 +191,7 @@ body {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff11;
+    background-color: rgba(255, 255, 255, 0.07);
     border-radius: 12px;
   }
   
@@ -215,7 +206,8 @@ body {
     border-collapse: collapse;
   }
   
-  table th, table td {
+  table th,
+  table td {
     padding: 12px;
     text-align: center;
     border: 1px solid #0f0101;
@@ -229,11 +221,12 @@ body {
   table tr:nth-child(even) {
     background-color: #22555e;
   }
+  
   .logout-link {
-    display: inline-block; 
-    width: 10%; 
+    display: inline-block;
+    width: 10%;
     text-align: center;
-    margin: 20px 650px; 
+    margin: 20px 650px;
     padding: 10px;
     background-color: #e74c3c;
     color: white;
@@ -245,12 +238,8 @@ body {
     background-color: #c0392b;
   }
   
-  /* Add this to the main CSS file */
-
-
-
-/* Universal Reset */
-* {
+  
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -263,6 +252,7 @@ body {
     padding: 20px;
     background: linear-gradient(to right, #000207, #0b111d);
     position: relative;
+    color: #fff;
   }
   
   .container {
@@ -291,7 +281,7 @@ body {
   .button:hover,
   .logout-link:hover,
   .back-link:hover {
-    background-color: #525253;
+    background-color: #3d3d41;
   }
   
   /* Responsive form */
@@ -317,24 +307,11 @@ body {
     height: auto !important;
   }
   
-  /* Watermark styling */
-  body::before {
-    content: "Property of Kingsley, do not use without permission.";
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-30deg);
-    font-size: 20px;
-    color: rgba(253, 251, 251, 0.952);
-    z-index: 0;
-    white-space: nowrap;
-    pointer-events: none;
-    user-select: none;
-  }
-  
   /* Mobile specific tweaks */
   @media (max-width: 768px) {
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-size: 22px;
       text-align: center;
     }
@@ -351,25 +328,40 @@ body {
       overflow-x: auto;
       display: block;
     }
+  
+    /* Ensure buttons and inputs fit properly on smaller screens */
+    .login-container,
+    .form-page,
+    .dashboard,
+    .chart-page,
+    .transaction-page {
+      padding: 15px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .quick-actions {
+      grid-template-columns: 1fr; /* Stack quick actions on mobile */
+    }
   }
-
+  
   /* Watermark styling */
-body::before {
+  body::before {
     content: "Property of Kingsley, do not use without permission.";
     font-size: 30px;
-    color: rgba(253, 251, 251, 0.952); /* Light color for the watermark */
+    color: rgba(253, 251, 251, 0.952); 
     position: fixed;
     top: 50%;
     left: 20%;
-    transform: translate(-50%, -30%); /* Center the watermark */
+    transform: translate(-50%, -30%); 
     white-space: nowrap;
-    z-index: -1; /* Ensure the watermark is in the background */
-    pointer-events: none; /* Prevent watermark from interfering with user interactions */
-    opacity: 0.5; /* Transparency of watermark */
+    z-index: -1; 
+    pointer-events: none; 
+    opacity: 0.5; 
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-align: center;
-    transform: rotate(-45deg); /* Rotate the watermark at an angle */
-    user-select: none; /* Prevent users from selecting the watermark text */
+    transform: rotate(-45deg);
+    user-select: none;
   }
   
