@@ -298,7 +298,7 @@ table tr:nth-child(even) {
 
 /* Watermark */
 body::before {
-  content: "Property of Kingsley, do not use without permission.";
+  content: "Kingsley's property DO NOT USE";
   font-size: 30px;
   color: rgba(253, 251, 251, 0.1);
   position: fixed;
