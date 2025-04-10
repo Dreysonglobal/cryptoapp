@@ -1,367 +1,316 @@
-/* css/style.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background: linear-gradient(to right, #000207, #0b111d); /* Dark background */
+  position: relative;
+  color: #fff;
+}
+
+/* Login Page */
 .login-container {
-    max-width: 400px;
-    margin: 100px auto;
-    background: rgba(255, 255, 255, 0.07); 
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-  }
-  
-  .login-container h1 {
-    margin-bottom: 25px;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 12px;
-    background-color: #2563eb;
-    border: none;
-    color: white;
-    font-size: 18px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #1e40af;
-  }
-  
-  /* Dashboard Page */
-  .dashboard {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.07);
-    border-radius: 12px;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header h2 {
-    margin: 0;
-  }
-  
-  header button {
-    background: crimson;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  header button:hover {
-    background: darkred;
-  }
-  
-  .balance-section {
-    margin: 30px 0;
-    text-align: center;
+  max-width: 400px;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+}
+
+.login-container h1 {
+  margin-bottom: 25px;
+}
+
+input[type="email"],
+input[type="password"],
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+/* Dashboard Page */
+.dashboard {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  margin: 0;
+}
+
+header button {
+  background: crimson;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+header button:hover {
+  background: darkred;
+}
+
+.balance-section {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 22px;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.quick-actions a {
+  display: block;
+  background: #1e40af;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.quick-actions a:hover {
+  background: #1e3a8a;
+}
+
+.form-page {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  color: white;
+}
+
+.form-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form button {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #15803d;
+}
+
+.back-link {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Chart Page */
+.chart-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.07); /* Fixed */
+  border-radius: 12px;
+  text-align: center;
+}
+
+.chart-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#priceChart,
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+/* Transaction History Page */
+.transaction-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  color: white;
+}
+
+.transaction-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  color: white;
+}
+
+table th {
+  background-color: #1e40af;
+  color: #ffffff;
+}
+
+table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #0f0101;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+table tr:nth-child(even) {
+  background-color: #1e3a8a;
+}
+
+.logout-link {
+  display: inline-block;
+  width: 10%;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.logout-link:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive buttons & links */
+.button,
+.logout-link,
+.back-link {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #054935;
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover,
+.logout-link:hover,
+.back-link:hover {
+  background-color: #3d3d41;
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3 {
     font-size: 22px;
-  }
-  
-  .quick-actions {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  
-  .quick-actions a {
-    display: block;
-    background: #1e40af;
-    padding: 20px;
-    color: white;
     text-align: center;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 18px;
   }
-  
-  .quick-actions a:hover {
-    background: #1e3a8a;
-  }
-  
+
+  .chart-page,
+  .transaction-page,
+  .dashboard,
+  .login-container,
   .form-page {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.07); 
-    border-radius: 12px;
-  }
-  
-  .form-page h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  form input,
-  form select {
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  form button {
-    background-color: #16a34a;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #15803d;
-  }
-  
-  .back-link {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    color: #60a5fa;
-    text-decoration: none;
-  }
-  
- 
-  #priceChart {
-    width: 80%;
-    height: 400px;
+    padding: 15px;
+    width: 100%;
     margin: 0 auto;
   }
-  
-  .chart-page {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .back-link {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    color: #007bff;
-  }
-  
-  .back-link:hover {
-    text-decoration: underline;
-  }
-  
-  .chart-page {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 12px;
-  }
-  
-  .chart-page h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  canvas {
-    max-width: 100%;
-    height: 400px;
-    margin: 0 auto;
-  }
-  
-  /* For transaction history */
-  .transaction-page {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.07);
-    border-radius: 12px;
-  }
-  
-  .transaction-page h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+
   table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-  }
-  
-  table th,
-  table td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #0f0101;
-  }
-  
-  table th {
-    background-color: #4CAF50;
-    color: rgb(7, 3, 3);
-  }
-  
-  table tr:nth-child(even) {
-    background-color: #22555e;
-  }
-  
-  .logout-link {
-    display: inline-block;
-    width: 10%;
-    text-align: center;
-    margin: 20px 650px;
-    padding: 10px;
-    background-color: #e74c3c;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-  }
-  
-  .logout-link:hover {
-    background-color: #c0392b;
-  }
-  
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Body and container styling */
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    background: linear-gradient(to right, #000207, #0b111d);
-    position: relative;
-    color: #fff;
-  }
-  
-  .container {
-    max-width: 100%;
-    margin: auto;
-    padding: 10px;
-  }
-  
-  /* Responsive buttons & links */
-  .button,
-  .logout-link,
-  .back-link {
+    font-size: 14px;
+    overflow-x: auto;
     display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 10px auto;
-    text-align: center;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 8px;
-    background-color: #054935;
-    color: white;
-    text-decoration: none;
   }
-  
-  .button:hover,
-  .logout-link:hover,
-  .back-link:hover {
-    background-color: #3d3d41;
+
+  .quick-actions {
+    grid-template-columns: 1fr;
   }
-  
-  /* Responsive form */
-  form {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  input,
-  select {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: 1px solid #070707;
-    font-size: 16px;
-  }
-  
-  /* Chart and table responsiveness */
-  canvas {
-    width: 100% !important;
-    height: auto !important;
-  }
-  
-  /* Mobile specific tweaks */
-  @media (max-width: 768px) {
-    h1,
-    h2,
-    h3 {
-      font-size: 22px;
-      text-align: center;
-    }
-  
-    .chart-page,
-    .transaction-page,
-    .dashboard-page,
-    .login-page {
-      padding: 10px;
-    }
-  
-    table {
-      font-size: 14px;
-      overflow-x: auto;
-      display: block;
-    }
-  
-    /* Ensure buttons and inputs fit properly on smaller screens */
-    .login-container,
-    .form-page,
-    .dashboard,
-    .chart-page,
-    .transaction-page {
-      padding: 15px;
-      width: 100%;
-      margin: 0 auto;
-    }
-  
-    .quick-actions {
-      grid-template-columns: 1fr; /* Stack quick actions on mobile */
-    }
-  }
-  
-  /* Watermark styling */
-  body::before {
-    content: "Property of Kingsley, do not use without permission.";
-    font-size: 30px;
-    color: rgba(253, 251, 251, 0.952); 
-    position: fixed;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -30%); 
-    white-space: nowrap;
-    z-index: -1; 
-    pointer-events: none; 
-    opacity: 0.5; 
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    transform: rotate(-45deg);
-    user-select: none;
-  }
-  
+}
+
+/* Watermark */
+body::before {
+  content: "Property of Kingsley, do not use without permission.";
+  font-size: 30px;
+  color: rgba(253, 251, 251, 0.1);
+  position: fixed;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -30%) rotate(-45deg);
+  white-space: nowrap;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
